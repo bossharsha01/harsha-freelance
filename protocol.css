@@ -154,48 +154,61 @@ h2 {
   border-radius: 15px;
 }
 
-/* Contact Section */
-form {
-  display: flex;
-  flex-direction: column;
+/* Updated Contact Section */
+/* Updated Contact Section */
+.contact {
+  text-align: center;
+  padding: 80px 20px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.contact-info {
   max-width: 600px;
   margin: 0 auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 2s ease-in-out;
 }
 
-form input, form textarea {
-  padding: 10px;
-  margin: 10px 0;
-  border: none;
-  border-radius: 5px;
+.contact-info p {
+  font-size: 20px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff; /* White text for the labels */
 }
 
-form button {
-  padding: 10px;
-  background: #6a1b9a;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease;
+.contact-info a {
+  color: #ffffff; /* Black color for the links */
+  text-decoration: none;
+  margin-left: 10px;
+  transition: color 0.3s ease;
+  font-weight: bold; /* Make the links slightly bolder */
 }
 
-form button:hover {
-  background: #4a148c;
+.contact-info a:hover {
+  color: #6a1b9a; /* Purple color on hover */
+  text-decoration: underline;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.8);
+/* Social Icons */
+.contact-info p::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.contact-info p:nth-child(1)::before {
+  background-image: url('https://static.vecteezy.com/system/resources/previews/022/484/516/original/google-mail-gmail-icon-logo-symbol-free-png.png');
+}
+
+.contact-info p:nth-child(2)::before {
+  background-image: url('https://th.bing.com/th/id/OIP.JCI8klaaA1w4LCtljpeJoAHaHa?rs=1&pid=ImgDetMain');
 }
